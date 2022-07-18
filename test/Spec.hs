@@ -22,5 +22,5 @@ prop_nonPrimesAreComposite val = if result == Just False
 main :: IO ()
 main = do
   quickCheck prop_validPrimesOnly
-  quickCheck prop_primesArePrime
-  quickCheck prop_nonPrimesAreComposite
+  quickCheckWith stdArgs { maxSuccess = 1000 } prop_primesArePrime
+  quickCheckWith stdArgs { maxSuccess = 1000 } prop_nonPrimesAreComposite
