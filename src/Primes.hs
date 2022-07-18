@@ -1,7 +1,7 @@
 module Primes where
 
 primes :: [Int]
-primes = [1 .. ]
+primes = sieve [2 .. ]
 
 sieve :: [Int] -> [Int]
 sieve [] = []
